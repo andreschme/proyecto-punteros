@@ -1,30 +1,22 @@
-// Definición de librerías
+// Definicion de librerias
 #include <iostream>
 using namespace std;
 
-// Función para intercambiar dos valores usando punteros
-void intercambiar(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-// Método principal
 int main() {
-    // Declaración de variables
-    int num1 = 42, num2 = 100;
+    // Declaracion de una variable entera
+    int numero = 10;
 
-    // Muestra los valores originales
-    cout << "Antes del intercambio:" << endl;
-    cout << "num1 = " << num1 << ", num2 = " << num2 << endl;
+    // Declaracion de un puntero y asignacion de la direccion de la variable
+    int* ptr = &numero;
 
-    // Llamada a la función de intercambio
-    intercambiar(&num1, &num2);
+    // Muestra el valor original de la variable
+    cout << "Valor original de numero: " << numero << endl;
 
-    // Muestra los valores después del intercambio
-    cout << "Después del intercambio:" << endl;
-    cout << "num1 = " << num1 << ", num2 = " << num2 << endl;
+    // Modificacion del valor de la variable a traves del puntero
+    *ptr = 20;
+
+    // Muestra el nuevo valor de la variable
+    cout << "Nuevo valor de numero a través del puntero: " << numero << endl;
 
     return 0;
 }
-
